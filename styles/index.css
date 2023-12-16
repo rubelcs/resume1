@@ -97,7 +97,7 @@ header .wrapper {
   }
   .menu {
     position: absolute;
-    /* width: 200px; */
+    width: 0px;
     height: 80vh;
     z-index: 1;
     top: 100%;
@@ -133,7 +133,7 @@ header .wrapper {
   }
   .menu {
     position: absolute;
-    /* width: 400px; */
+    width: 0px;
     height: 80vh;
     z-index: 1;
     top: 100%;

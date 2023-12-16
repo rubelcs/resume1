@@ -97,13 +97,13 @@ header .wrapper {
   }
   .menu {
     position: absolute;
-    width: 200px;
+    /* width: 200px; */
     height: 80vh;
     z-index: 1;
     top: 100%;
-    right: -100%;
+    right: 0;
     background-color: var(--secondaryColor);
-    transition: width 1s ease-in;
+    transition: width 0.8s ease-in-out;
     text-align: center;
   }
   .wrapper ul li {
@@ -133,11 +133,11 @@ header .wrapper {
   }
   .menu {
     position: absolute;
-    width: 400px;
+    /* width: 400px; */
     height: 80vh;
     z-index: 1;
     top: 100%;
-    right: -100%;
+    right: 0;
     padding-top: 3vh;
     background-color: var(--secondaryColor);
     transition: width 1s ease-in;
@@ -611,7 +611,6 @@ th {
 }
 .layer h4 {
   font-size: 32px;
-
   text-shadow: 0.5px 0.5px 1px white;
   margin-bottom: 15px;
 }
@@ -638,8 +637,25 @@ th {
   cursor: pointer;
 }
 @media screen and (min-width: 577px) and (max-width: 992px) {
-  
+  .project-title .heading {
+    padding: 25px 20px 20px;
+    font-size: 5vw;
+  }
+  .all-projects {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 50px;
+    gap: 40px;
+  }
+  .layer h4 {
+    font-size: 4vw;
+    text-shadow: 0.2px 0.2px .3px white;
+  }
+  .layer p {
+    font-size: 3.2vw;
+    text-shadow: 0.2px 0.2px .3px white;
+  } 
 }
+
 @media screen and (max-width: 576px) {
   
   .project-title .heading {
@@ -649,5 +665,13 @@ th {
   .all-projects {
     grid-template-columns: repeat(1, 1fr);
     padding: 50px;
+  }
+  .layer h4 {
+    font-size: 4.3vw;
+    text-shadow: 0.2px 0.2px .3px white;
+  }
+  .layer p {
+    font-size: 3.5vw;
+    text-shadow: 0.2px 0.2px .3px white;
   }
 }

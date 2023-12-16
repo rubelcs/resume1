@@ -6,18 +6,18 @@ const everyLi = document.querySelectorAll("#menu li");
 function menuStyle(hamburgerStyle, closeMenuStyle, menuStyle) {
   hamburger.style.display = hamburgerStyle;
   closeMenu.style.display = closeMenuStyle;
-  menu.style.right = menuStyle;
+  menu.style.width = menuStyle;
 }
 function iconToggle() {
   hamburger.addEventListener("click", () => {
-    menuStyle("none", "block", "0%");
+    menuStyle("none", "block", "300px");
   });
   closeMenu.addEventListener("click", () => {
-    menuStyle("block", "none", "100%");
+    menuStyle("block", "none", "0px");
   });
   everyLi.forEach((li) =>
     li.addEventListener("click", () => {
-      menuStyle("block", "none", "100%");
+      menuStyle("block", "none", "0px");
     })
   );
 }

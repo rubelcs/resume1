@@ -25,6 +25,21 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.heading {
+  /* width: 100%; */
+  padding: 50px 20px 30px;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2vw;
+  color: var(--secondaryColor);
+}
+.divider {
+  width: 150px;
+  height: 2px;
+  margin: 20px auto 10px;
+  background-color: var(--buttonBg);
+}
 
 header {
   width: 100%;
@@ -160,25 +175,6 @@ header .wrapper {
 }
 
 /* =======testimonial section====== */
-.project-title {
-  margin: 10px 0 40px;
-}
-.project-title .heading {
-  width: 100%;
-  margin: 0 auto;
-  padding: 30px 20px 10px;
-  text-align: center;
-  font-size: 3vw;
-  color: var(--primaryColor);
-  text-shadow: 0.8px 0.8px 1px var(--primaryColor);
-  /* border: 10px solid red; */
-}
-.project-title .divider {
-  width: 90px;
-  height: 5px;
-  margin: 10px auto 20px;
-  background-color: var(--secondaryColor);
-}
 
 .testimonial-section {
   width: 100%;
@@ -191,6 +187,18 @@ header .wrapper {
   margin: 0 auto;
   background-color: rgba(184, 96, 23, 0.396);
   position: relative;
+}
+.testimonial-title {
+  margin: 10px 0;
+}
+.testimonial-title .heading {
+  padding: 20px 0 5px;
+  font-size: 2.5vw;
+}
+.testimonial-title .divider {
+  margin: 5px auto 40px;
+  height: 5px;
+  width: 90px;
 }
 .testimonial {
   width: 800px;
@@ -267,7 +275,7 @@ header .wrapper {
   border-radius: 10px;
 }
 
-@media screen and (min-width: 577px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   .testimonial-section {
     height: 70vh;
   }
@@ -276,52 +284,147 @@ header .wrapper {
     height: 90%;
     position: relative;
   }
+  .testimonial-title .heading {
+    padding: 15px 20px 5px;
+    font-size: 3.8vw;
+  }
+  .testimonial-title .divider {
+    margin: 8px auto 15px;
+    height: 4px;
+    width: 90px;
+  }
   .testimonial {
-    width: 400px;
-    height: 50%;
+    width: 550px;
+    height: 60%;
     overflow: hidden;
+    top: 60%;
   }
   .indicator {
     position: absolute;
-    bottom: 70px;
+    bottom: 10px;
+  }
+  .btn {
+    height: 15px;
+    width: 15px;
+  }
+  .active-btn {
+    width: 20px;
   }
   .testimonial-row {
     width: 2400px;
     height: 100%;
     display: flex;
     align-items: start;
-    gap: 400px;
+    gap: 250px;
     transition: 1s;
   }
   .testimonial-col {
-    width: 400px;
+    width: 550px;
+    height: 100%;
+    border-radius: 15px;
+    position: relative;
+  }
+  .user-text {
+  width: 400px;
+  height: 140px;
+  position: absolute;
+  padding: 30px 30px 20px 20px;
+  z-index: 2;
+  }
+  .user-text p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .user-text h3 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+  }
+  .user-img {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    
+  }
+  .user-img img {
+  height: 100%;
+  border-radius: 10px;
+  }
+}
+
+
+@media screen and (min-width: 577px) and (max-width: 767px) {
+  .testimonial-section {
+    height: 75vh;
+  }
+  .testimonial-wrapper {
+    width: 90%;
+    height: 90%;
+    position: relative;
+  }
+  .testimonial-title .heading {
+    padding: 25px 20px 8px;
+    font-size: 4vw;
+  }
+  .testimonial-title .divider {
+    margin: 4px auto 25px;
+    height: 5px;
+    width: 90px;
+  }
+  .testimonial {
+    width: 500px;
+    height: 65%;
+    overflow: hidden;
+    top: 65%;
+  }
+  .indicator {
+    position: absolute;
+    bottom: 15px;
+  }
+  .btn {
+    height: 13px;
+    width: 13px;
+  }
+  .active-btn {
+    width: 20px;
+  }
+  .testimonial-row {
+    width: 2400px;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    gap: 300px;
+    transition: 1s;
+  }
+  .testimonial-col {
+    width: 500px;
     height: 100%;
     border-radius: 15px;
     position: relative;
   }
   .user-text {
     width: 400px;
-    height: auto;
-    top: 40%;
-    left: 0;
-    transform: translateY(0%);
-    border-radius: 90px;
+    height: 140px;
+    bottom: 0; 
+    left: 50%;
+    transform: translate(-50%,-40%);
+    padding: 35px 25px 15px;
+    border-radius: 20px;
   }
   .user-text p {
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 12px;
+    line-height: 12px;
   }
   .user-text h3 {
     margin: 10px 0 5px;
-    font-size: 20px;
+    font-size: 16px;
   }
   .user-img {
     position: absolute;
-    top: 3%;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
-    height: 150px;
-    width: 150px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
     overflow: hidden;
     z-index: 3;
@@ -340,55 +443,76 @@ header .wrapper {
   }
   .testimonial-wrapper {
     width: 100%;
-    height: 75%;
+    height: 90%;
     position: relative;
   }
+  .testimonial-title .heading {
+    padding: 15px 20px 8px;
+    font-size: 5vw;
+  }
+  .testimonial-title .divider {
+    margin: 4px auto 15px;
+    height: 5px;
+    width: 90px;
+  }
   .testimonial {
-    width: 325px;
+    width: 300px;
     height: 70%;
+    top: 60%;
     overflow: hidden;
   }
   .indicator {
     position: absolute;
-    bottom: 50px;
+    bottom: 20px;
+  }
+  .btn {
+    height: 13px;
+    width: 13px;
+    border-radius: 20px;
+    margin: 5px;
+  }
+  .active-btn {
+    width: 20px;
   }
   .testimonial-row {
     width: 2400px;
     height: 100%;
     display: flex;
     align-items: start;
-    gap: 475px;
+    gap: 500px;
     transition: 1s;
   }
   .testimonial-col {
-    width: 325px;
+    width: 300px;
     height: 100%;
     border-radius: 15px;
     position: relative;
   }
   .user-text {
-    width: 325px;
-    height: auto;
-    top: 35%;
-    left: 0;
-    transform: translateY(0%);
-    border-radius: 60px;
+    width: 280px;
+    height: 150px;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    border-radius: 20px;
+    padding: 40px 20px;
+    
   }
   .user-text p {
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 10px;
+    line-height: 12px;
   }
   .user-text h3 {
-    margin: 10px 0 5px;
-    font-size: 20px;
+    margin: 6px 0 5px;
+    font-size: 12px;
   }
   .user-img {
     position: absolute;
-    top: 10%;
+    top: 2%;
     left: 50%;
     transform: translateX(-50%);
-    height: 125px;
-    width: 125px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
     overflow: hidden;
     z-index: 3;

@@ -76,10 +76,10 @@ header .wrapper {
 .wrapper ul li a:hover::after {
   width: 80%;
 }
-/* .active> a::after{
+ul .active a::after{
   width:80%;
   color:var(--primaryColor);
-} */
+}
 .nav-toggle {
   display: none;
   font-size: 30px;

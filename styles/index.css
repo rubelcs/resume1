@@ -26,7 +26,6 @@ body {
   background-size: cover;
 }
 
-
 header {
   width: 100%;
   height: 10vh;
@@ -348,7 +347,7 @@ th {
   font-size: 1.5vw;
   font-weight: 600;
 }
-td{
+td {
   font-size: 1.3vw;
   font-weight: 500;
 }
@@ -365,7 +364,7 @@ td{
     font-size: 2.4vw;
     font-weight: 600;
   }
-  td{
+  td {
     font-size: 2vw;
     font-weight: 500;
   }
@@ -378,7 +377,7 @@ td{
     font-size: 2.8vw;
     font-weight: 600;
   }
-  td{
+  td {
     font-size: 2.1vw;
     font-weight: 500;
   }
@@ -425,18 +424,19 @@ td{
   align-items: center;
 }
 .skill-texts {
-  width: 60%;
+  width: 85%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 .skill-texts .heading {
   width: 100%;
   margin: 0 auto;
   padding: 50px 20px 20px;
   text-align: center;
-  font-size: 2.5vw;
+  font-size: 3vw;
   color: var(--primaryColor);
   text-shadow: 0.8px 0.8px 1px var(--primaryColor);
   /* border: 10px solid red; */
@@ -467,14 +467,15 @@ td{
 }
 .main-ol > div {
   display: inline-block;
-  width: 70%;
+  width: 85%;
   text-align: left;
   padding: 15px 0 20px 10px;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 .main-ol li {
   font-size: 32px;
   font-weight: 600;
+  padding-left: 30px;
   color: var(--primaryColor);
   text-shadow: 0.1px 0.1px 1px rgba(0, 0, 0, 0.5);
 }
@@ -484,26 +485,26 @@ td{
 .sub-ol {
   list-style: lower-roman;
   margin: 0 auto;
-  padding: 10px 0;
-  width: 50%;
+  padding: 10px 25px;
+  width: 85%;
   list-style-position: inside;
   text-align: start;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
 }
 .sub-ol li {
-  font-size: 20px;
+  font-size: 22px;
   color: var(--primaryColor);
 }
-.unorder-list{
-  width: 70%;
+.unorder-list {
+  width: 80%;
   margin: 0 auto;
   padding: 10px 0 10px 20px;
   list-style-type: disc;
-  list-style-position: inside;
+  /* list-style-position: inside; */
 }
-.unorder-list li{
-  font-size:14px;
-  line-height: 14px;
+.unorder-list li {
+  font-size: 18px;
+  line-height: 20px;
   /* background-color: blue; */
 }
 .sub-ol ::marker {
@@ -538,19 +539,19 @@ td{
   .sub-ol ::marker {
     font-size: 16px;
   }
-  .unorder-list li{
-    font-size:14px;
-    line-height: 14px;
+  .unorder-list li {
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 @media screen and (max-width: 576px) {
   .skills {
-    height: 100vh;
+    height: 85vh;
     padding: 30px 0;
   }
   .skill-texts .heading {
     padding: 25px 20px 20px;
-    font-size: 5vw;
+    font-size: 7vw;
   }
   .skills-wrapper {
     width: 80%;
@@ -558,25 +559,37 @@ td{
   }
   .skill-texts {
     width: 100%;
+    height: 80%;
   }
   .main-ol {
     padding: 40px 20px 20px 20px;
+    height: auto;
   }
   .main-ol > div {
-    width: 80%;
+    width: 95%;
   }
   .main-ol li {
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 700;
   }
   .sub-ol {
     width: 90%;
   }
   .sub-ol li {
-    font-size: 14px;
+    font-size: 16px;
     padding-left: 10px;
+    font-weight: 600;
   }
   .sub-ol ::marker {
     font-size: 14px;
+  }
+  .unorder-list {
+    width: 90%;
+    margin: 0;
+  }
+  .unorder-list li {
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
@@ -679,16 +692,15 @@ td{
   }
   .layer h4 {
     font-size: 4vw;
-    text-shadow: 0.2px 0.2px .3px white;
+    text-shadow: 0.2px 0.2px 0.3px white;
   }
   .layer p {
     font-size: 3.2vw;
-    text-shadow: 0.2px 0.2px .3px white;
-  } 
+    text-shadow: 0.2px 0.2px 0.3px white;
+  }
 }
 
 @media screen and (max-width: 576px) {
-  
   .project-title .heading {
     padding: 25px 20px 20px;
     font-size: 5vw;
@@ -699,72 +711,70 @@ td{
   }
   .layer h4 {
     font-size: 4.3vw;
-    text-shadow: 0.2px 0.2px .3px white;
+    text-shadow: 0.2px 0.2px 0.3px white;
   }
   .layer p {
     font-size: 3.5vw;
-    text-shadow: 0.2px 0.2px .3px white;
+    text-shadow: 0.2px 0.2px 0.3px white;
   }
 }
 
 /* =======testimonial section====== */
 
-.testimonial-section{
-  width: 100% ;
+.testimonial-section {
+  width: 100%;
   height: 90vh;
   padding: 30px 0;
 }
-.testimonial-wrapper{
+.testimonial-wrapper {
   width: 85%;
   height: 100%;
   margin: 0 auto;
   background-color: rgba(184, 96, 23, 0.396);
   position: relative;
 }
-.testimonial{
+.testimonial {
   width: 800px;
   height: 400px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   overflow: hidden;
   background-color: var(--primaryColor);
   border-radius: 10px;
 }
-.indicator{
+.indicator {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom:50px;
+  bottom: 50px;
 }
-.btn{
+.btn {
   display: inline-block;
   height: 20px;
   width: 20px;
   border-radius: 20px;
-  margin: 3px;
+  margin: 5px;
   background-color: white;
-  transition: .5s;
-  box-shadow: 1px .5px 1px white;
+  transition: 0.5s;
+  box-shadow: 1px 0.5px 1px white;
 }
-.active-btn{
+.active-btn {
   width: 35px;
-  /* height: px; */
 }
-.testimonial-row{
-  width:2400px;
-  /* height: 20vh; */
+.testimonial-row {
+  width: 2400px;
   display: flex;
   align-items: center;
   transition: 1s;
 }
-.testimonial-col{
+.testimonial-col {
   width: 800px;
   height: 400px;
   position: relative;
 }
-.user-text{
+.user-text {
   background-color: #a6766542;
   width: 500px;
   height: 280px;
@@ -777,94 +787,87 @@ td{
   padding: 50px;
   z-index: 2;
 }
-.user-text p{
+.user-text p {
   font-size: 20px;
   line-height: 24px;
   color: white;
 }
-.user-text h3{
+.user-text h3 {
   margin: 35px 0 5px;
   color: white;
   font-size: 26px;
 }
-.user-img{
+.user-img {
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
 }
-.user-img img{
+.user-img img {
   height: 100%;
   border-radius: 10px;
 }
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
-  .testimonial-section{
-    width: 100% ;
+  .testimonial-section {
     height: 70vh;
-    padding: 30px 0;
   }
-  .testimonial-wrapper{
+  .testimonial-wrapper {
     width: 90%;
     height: 90%;
     position: relative;
   }
-  .testimonial{
+  .testimonial {
     width: 400px;
     height: 50%;
     overflow: hidden;
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%); */
   }
-  .indicator{
+  .indicator {
     position: absolute;
-    bottom:70px;
+    bottom: 70px;
   }
-  .testimonial-row{
-    width:2400px;
+  .testimonial-row {
+    width: 2400px;
     height: 100%;
     display: flex;
     align-items: start;
     gap: 400px;
     transition: 1s;
   }
-  .testimonial-col{
+  .testimonial-col {
     width: 400px;
     height: 100%;
     border-radius: 15px;
-    border: 2px solid blue;
     position: relative;
   }
-  .user-text{
+  .user-text {
     width: 400px;
     height: auto;
-    top:40%;
+    top: 40%;
     left: 0;
     transform: translateY(0%);
     border-radius: 90px;
   }
-  .user-text p{
+  .user-text p {
     font-size: 14px;
     line-height: 14px;
   }
-  .user-text h3{
+  .user-text h3 {
     margin: 10px 0 5px;
     font-size: 20px;
   }
-  .user-img{
+  .user-img {
     position: absolute;
     top: 3%;
-    left:  50%;
+    left: 50%;
     transform: translateX(-50%);
-    height: 150px ;
+    height: 150px;
     width: 150px;
     border-radius: 50%;
     overflow: hidden;
     z-index: 3;
   }
-  .user-img img{
+  .user-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -873,6 +876,68 @@ td{
 }
 
 @media screen and (max-width: 576px) {
-  
-  
+  .testimonial-section {
+    height: 70vh;
+  }
+  .testimonial-wrapper {
+    width: 100%;
+    height: 75%;
+    position: relative;
+  }
+  .testimonial {
+    width: 325px;
+    height: 70%;
+    overflow: hidden;
+  }
+  .indicator {
+    position: absolute;
+    bottom: 50px;
+  }
+  .testimonial-row {
+    width: 2400px;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    gap: 475px;
+    transition: 1s;
+  }
+  .testimonial-col {
+    width: 325px;
+    height: 100%;
+    border-radius: 15px;
+    position: relative;
+  }
+  .user-text {
+    width: 325px;
+    height: auto;
+    top: 35%;
+    left: 0;
+    transform: translateY(0%);
+    border-radius: 60px;
+  }
+  .user-text p {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .user-text h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+  }
+  .user-img {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 3;
+  }
+  .user-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
 }

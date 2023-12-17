@@ -941,3 +941,136 @@ td {
     object-position: top center;
   }
 }
+
+/* ====footer====== */
+.footer {
+  width: 100%;
+  height: 40vh;
+  background-color: var(--buttonBg);
+}
+.footer-wrapper {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer-wrapper .logo {
+  flex-grow: 1;
+}
+.footer-wrapper .logo h3 {
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+.logo h3 span {
+  color: var(--secondaryColor);
+  text-shadow: 1px 1px 1px var(--secondaryColor);
+}
+.footer-info {
+  text-align: left;
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer-info h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.footer-info p {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+.socials {
+  margin-top: 15px;
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+}
+.footer-info .socials a {
+  text-decoration: none;
+  font-size: 30px;
+  display: inline-block;
+  color: var(--primaryColor);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .footer-wrapper {
+    width: 85%;
+  }
+  .footer-wrapper .logo {
+    flex-grow: 1;
+  }
+  .footer-wrapper .logo h3 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 1px;
+  }
+  .footer-info h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .footer-info p {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+  .socials {
+    margin-top: 10px;
+    display: flex;
+    justify-content: start;
+    gap: 8px;
+  }
+  .footer-info .socials a {
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer-wrapper {
+    width: 85%;
+  }
+  .footer-wrapper .logo {
+    flex-grow: 1;
+  }
+  .footer-wrapper .logo h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 1px;
+  }
+  .footer-info h4 {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  .footer-info p {
+    font-size: 10px;
+    margin-bottom: 3px;
+  }
+  .socials {
+    margin-top: 10px;
+    display: flex;
+    justify-content: start;
+    gap: 8px;
+  }
+  .footer-info .socials a {
+    font-size: 16px;
+    width: 22px;
+    height: 22px;
+  }
+}

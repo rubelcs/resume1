@@ -14,6 +14,8 @@ html,
 body {
   width: 100%;
   /* height: 100vh; */
+  position: relative;
+  z-index: -1;
 }
 
 .body-div {
@@ -90,6 +92,7 @@ header .wrapper {
 }
 .wrapper ul li a:hover::after {
   width: 80%;
+  z-index: 99;
 }
 /* .active> a::after{
   width:80%;
@@ -104,41 +107,6 @@ header .wrapper {
   display: none;
 }
 
-@media screen and (max-width: 576px) {
-  header {
-    position: relative;
-  }
-  .wrapper .logo h3 {
-    font-size: 5vw;
-  }
-  .menu {
-    position: absolute;
-    width: 0px;
-    height: 80vh;
-    z-index: 19;
-    top: 100%;
-    right: 0;
-    background-color: var(--secondaryColor);
-    transition: width 0.8s ease-in-out;
-    text-align: center;
-  }
-  .wrapper ul li {
-    display: block;
-    margin-bottom: 10px;
-  }
-  .wrapper ul li a {
-    font-size: 3vw;
-    font-weight: 700;
-    padding: 5px;
-    color: white;
-    display: none;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-}
-
 @media screen and (min-width: 577px) and (max-width: 992px) {
   header {
     position: relative;
@@ -150,13 +118,14 @@ header .wrapper {
     position: absolute;
     width: 0px;
     height: 80vh;
-    z-index: 19;
+    /* z-index: 19; */
     top: 100%;
     right: 0;
     padding-top: 3vh;
     background-color: var(--secondaryColor);
     transition: width 1s ease-in;
     text-align: center;
+    z-index: 99;
   }
   .wrapper ul li {
     display: block;
@@ -169,6 +138,41 @@ header .wrapper {
     color: white;
     display: none;
   }
+  .nav-toggle {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header {
+    position: relative;
+  }
+  .wrapper .logo h3 {
+    font-size: 5vw;
+  }
+  .menu {
+    position: absolute;
+    width: 0px;
+    height: 80vh;
+    top: 100%;
+    right: 0;
+    background-color: var(--secondaryColor);
+    transition: width 0.8s ease-in-out;
+    text-align: center;
+    z-index: 99;
+  }
+  .wrapper ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .wrapper ul li a {
+    font-size: 3vw;
+    font-weight: 700;
+    padding: 5px;
+    color: white;
+    display: none;
+  }
+
   .nav-toggle {
     display: block;
   }
@@ -187,6 +191,7 @@ header .wrapper {
   margin: 0 auto;
   background-color: rgba(184, 96, 23, 0.396);
   position: relative;
+  /* z-index: 1; */
 }
 .testimonial-title {
   margin: 10px 0;
@@ -202,20 +207,22 @@ header .wrapper {
 }
 .testimonial {
   width: 800px;
-  height: 400px;
+  height: 380px;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
   background-color: var(--primaryColor);
   border-radius: 10px;
+  /* z-index: 2; */
 }
 .indicator {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 50px;
+  bottom: 20px;
+  /* z-index: 2; */
 }
 .btn {
   display: inline-block;
@@ -238,8 +245,9 @@ header .wrapper {
 }
 .testimonial-col {
   width: 800px;
-  height: 400px;
+  height: 380px;
   position: relative;
+  /* z-index: 2; */
 }
 .user-text {
   background-color: #a6766542;
@@ -252,7 +260,7 @@ header .wrapper {
   border-radius: 10px;
   color: var(--buttonTextColor);
   padding: 50px;
-  z-index: 2;
+  z-index: 3;
 }
 .user-text p {
   font-size: 20px;
@@ -269,6 +277,7 @@ header .wrapper {
   top: 0;
   right: 0;
   height: 100%;
+  z-index: 2;
 }
 .user-img img {
   height: 100%;
@@ -276,13 +285,17 @@ header .wrapper {
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
+ 
   .testimonial-section {
     height: 70vh;
+    position: relative;
+    z-index: -1;
   }
   .testimonial-wrapper {
     width: 90%;
     height: 90%;
     position: relative;
+    z-index: 1;
   }
   .testimonial-title .heading {
     padding: 15px 20px 5px;
@@ -298,10 +311,12 @@ header .wrapper {
     height: 60%;
     overflow: hidden;
     top: 60%;
+    z-index: 2;
   }
   .indicator {
     position: absolute;
     bottom: 10px;
+    z-index: 2;
   }
   .btn {
     height: 15px;
@@ -317,19 +332,21 @@ header .wrapper {
     align-items: start;
     gap: 250px;
     transition: 1s;
+    z-index: 2;
   }
   .testimonial-col {
     width: 550px;
     height: 100%;
     border-radius: 15px;
     position: relative;
+    z-index: 2;
   }
   .user-text {
   width: 400px;
   height: 140px;
   position: absolute;
   padding: 30px 30px 20px 20px;
-  z-index: 2;
+  z-index: 3;
   }
   .user-text p {
     font-size: 12px;
@@ -343,6 +360,7 @@ header .wrapper {
     position: absolute;
     right: 0;
     height: 100%;
+    z-index: 2;
     
   }
   .user-img img {
@@ -353,13 +371,17 @@ header .wrapper {
 
 
 @media screen and (min-width: 577px) and (max-width: 767px) {
+
   .testimonial-section {
-    height: 75vh;
+    height: 75vh;   
+    position: relative;
+    z-index: -1;
   }
   .testimonial-wrapper {
     width: 90%;
     height: 90%;
     position: relative;
+    z-index: 1;
   }
   .testimonial-title .heading {
     padding: 25px 20px 8px;
@@ -438,13 +460,18 @@ header .wrapper {
 }
 
 @media screen and (max-width: 576px) {
+  
   .testimonial-section {
     height: 70vh;
+    position: relative;
+    z-index: -1;
+    /* background-color: blue; */
   }
   .testimonial-wrapper {
     width: 100%;
     height: 90%;
     position: relative;
+    z-index: -1;
   }
   .testimonial-title .heading {
     padding: 15px 20px 8px;
@@ -487,6 +514,7 @@ header .wrapper {
     height: 100%;
     border-radius: 15px;
     position: relative;
+    /* z-index: -1; */
   }
   .user-text {
     width: 280px;

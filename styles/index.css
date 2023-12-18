@@ -106,6 +106,7 @@ ul .active a::after {
     background-color: var(--secondaryColor);
     transition: width 0.8s ease-in-out;
     text-align: center;
+    z-index: 99;
   }
   .wrapper ul li {
     display: block;
@@ -142,6 +143,7 @@ ul .active a::after {
     background-color: var(--secondaryColor);
     transition: width 1s ease-in;
     text-align: center;
+    z-index: 99;
   }
   .wrapper ul li {
     display: block;

@@ -28,7 +28,17 @@ function iconToggle() {
     })
   );
   if (document.defaultView.window.innerWidth > 992) {
-    menuStyle("none", "none", 'full', "block");
+    menuStyle("none", "none", "full", "block");
   }
 }
 iconToggle();
+
+// ======preLoader Splash screen============
+function splashLoader() {
+  const loader = document.getElementById("splash-screen");
+
+  window.addEventListener("load", () => {
+    loader.style.display = "none";
+  });
+}
+splashLoader();

@@ -33,7 +33,7 @@ function iconToggle() {
 }
 iconToggle();
 
-
+// ======testimonial Slider =========
 const btn= document.getElementsByClassName('btn');
 const slide= document.getElementById('slide');
 
@@ -67,3 +67,13 @@ btn[2].onclick=function(){
 
 };
 testimonialSlider();
+
+// ======preLoader Splash screen============
+function splashLoader(){
+  const loader= document.getElementById('splash-screen');
+  
+  window.addEventListener('load',()=>{
+    loader.style.display="none";
+  })
+};
+splashLoader()

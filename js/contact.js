@@ -40,3 +40,13 @@ form.addEventListener("submit", (e) => {
   // console.log("hello");
   e.target.reset();
 });
+
+// ======preLoader Splash screen============
+function splashLoader() {
+  const loader = document.getElementById("splash-screen");
+
+  window.addEventListener("load", () => {
+    loader.style.display = "none";
+  });
+}
+splashLoader();

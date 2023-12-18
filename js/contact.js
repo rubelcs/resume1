@@ -28,15 +28,15 @@ function iconToggle() {
     })
   );
   if (document.defaultView.window.innerWidth > 992) {
-    menuStyle("none", "none", 'full', "block");
+    menuStyle("none", "none", "full", "block");
   }
 }
 iconToggle();
 
-const form= document.getElementById('form');
+const form = document.getElementById("form");
 
-form.addEventListener("submit",(e)=>{
+form.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log('hello')
+  // console.log("hello");
   e.target.reset();
-})
+});

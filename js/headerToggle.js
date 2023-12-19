@@ -1,3 +1,14 @@
+// ======preLoader Splash screen============
+function splashLoader() {
+  const loader = document.getElementById("splash-screen");
+
+  window.addEventListener("load", () => {
+    loader.style.display = "none";
+  });
+}
+splashLoader();
+
+// ===========Navbar Toggle section==========
 const hamburger = document.getElementById("hamburger");
 const closeMenu = document.getElementById("close");
 const menu = document.getElementById("menu");
@@ -32,13 +43,3 @@ function iconToggle() {
   }
 }
 iconToggle();
-
-// ======preLoader Splash screen============
-function splashLoader() {
-  const loader = document.getElementById("splash-screen");
-
-  window.addEventListener("load", () => {
-    loader.style.display = "none";
-  });
-}
-splashLoader();

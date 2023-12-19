@@ -1,3 +1,14 @@
+// ======preLoader Splash screen============
+function splashLoader() {
+  const loader = document.getElementById("splash-screen");
+
+  window.addEventListener("load", () => {
+    loader.style.display = "none";
+  });
+}
+splashLoader();
+
+// ======Navbar Toggle Section=========
 const hamburger = document.getElementById("hamburger");
 const closeMenu = document.getElementById("close");
 const menu = document.getElementById("menu");
@@ -67,8 +78,7 @@ const testimonialSlider = () => {
 };
 testimonialSlider();
 
-// ========contact submit =====
-
+// ========contact submit form validation =====
 const form = document.getElementById("form");
 const nameError = document.getElementById("name-error");
 const emailError = document.getElementById("email-error");
@@ -154,14 +164,4 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-// ======preLoader Splash screen============
-function splashLoader() {
-  const loader = document.getElementById("splash-screen");
 
-  window.addEventListener("load", () => {
-    loader.style.display = "none";
-
-    // submitBtn.setAttribute("disabled", true);
-  });
-}
-splashLoader();

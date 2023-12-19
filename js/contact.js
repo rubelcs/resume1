@@ -1,3 +1,14 @@
+// ======preLoader Splash screen============
+function splashLoader() {
+  const loader = document.getElementById("splash-screen");
+
+  window.addEventListener("load", () => {
+    loader.style.display = "none";
+  });
+}
+splashLoader();
+
+//==== Navbar Toggle responsive part==============
 const hamburger = document.getElementById("hamburger");
 const closeMenu = document.getElementById("close");
 const menu = document.getElementById("menu");
@@ -33,20 +44,92 @@ function iconToggle() {
 }
 iconToggle();
 
+// =====form validation functions===========
+// ========contact submit form validation =====
 const form = document.getElementById("form");
+const nameError = document.getElementById("name-error");
+const emailError = document.getElementById("email-error");
+const subjectError = document.getElementById("subject-error");
+const textAreaCount = document.getElementById("char-count");
+const checkbox = document.getElementById("robot");
+const submitBtn = document.getElementById("submit-btn");
 
+// ===name validation============
+function handleName() {
+  const name = document.getElementById("name").value;
+  if (name.length === 0) {
+    nameError.innerText = "can't be empty";
+    return false;
+  } else if (!name.match(/^[A-Za-z]+$/)) {
+    nameError.innerText = " alphabets only";
+    return false;
+  } else {
+    nameError.innerHTML = '<i class="ri-thumb-up-fill"></i>';
+    return true;
+  }
+}
+
+// ======Email Validation=======
+function handleEmail() {
+  const email = document.getElementById("email").value;
+
+  if (email.length === 0) {
+    emailError.innerText = "can't be empty";
+    return false;
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    emailError.innerText = "provide a valid email";
+    return false;
+  } else {
+    emailError.innerHTML = '<i class="ri-thumb-up-fill"></i>';
+    return true;
+  }
+}
+
+// ======subject validation=====
+function handleSubject() {
+  const subject = document.getElementById("subject").value;
+  if (subject.length === 0) {
+    subjectError.innerText = "can't be empty";
+    return false;
+  } else {
+    subjectError.innerHTML = '<i class="ri-thumb-up-fill"></i>';
+    return true;
+  }
+}
+
+// =======textarea validation=====
+function handleMessage(e) {
+  const message = e.target.value;
+  // console.log(message);
+  textAreaCount.innerText = message.length;
+}
+
+// ======checkbox value==========
+function handleCheckbox() {
+  if (checkbox.checked) {
+    return true;
+  }
+  return false;
+}
+
+// ===form validation==========
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  // console.log("hello");
-  e.target.reset();
+  if (
+    !handleName() ||
+    !handleEmail() ||
+    !handleSubject() ||
+    !handleCheckbox()
+  ) {
+    alert("please fix error to submit");
+  } else {
+    alert("Thanks for your message");
+    e.target.reset();
+    nameError.innerText = "";
+    emailError.innerText = "";
+    subjectError.innerText = "";
+    textAreaCount.innerText="0";
+  }
 });
 
-// ======preLoader Splash screen============
-function splashLoader() {
-  const loader = document.getElementById("splash-screen");
 
-  window.addEventListener("load", () => {
-    loader.style.display = "none";
-  });
-}
-splashLoader();

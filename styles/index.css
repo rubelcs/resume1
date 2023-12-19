@@ -228,36 +228,38 @@ ul .active a::after {
   width: 80%;
 }
 
+/* ====Media Query for Hero Section====== */
 @media screen and (min-width: 577px) and (max-width: 992px) {
   .hero {
-    padding: 3vh 0 3vh;
-
+    padding: 3vw 0 3vw;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     /* border: 1px solid red; */
   }
   .hero-wrapper {
     flex-direction: column-reverse;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
   }
   .hero-text {
     width: 100%;
     text-align: center;
     padding: 25px 0 15px 0;
-    gap: 25px;
+    gap: 15px;
   }
   .hero-text h1 {
     font-size: 4vw;
-    line-height: 4.5vw;
+    line-height: 4vw;
+    font-weight: 800;
   }
   .hero-text p {
-    font-size: 3vw;
+    font-size: 2.8vw;
   }
   .hero-text button {
-    padding: 1vw 3vw;
+    padding: 0.6vw 2.5vw;
     font-size: 2.5vw;
-    border-radius: 10px;
+    border-radius: 7px;
+    font-weight: 600;
   }
   .hero-image img {
     width: 90%;
@@ -268,7 +270,7 @@ ul .active a::after {
   .hero {
     padding-top: 3vh;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     /* border: 1px solid red; */
   }
   .hero-wrapper {
@@ -289,8 +291,8 @@ ul .active a::after {
     font-size: 4vw;
   }
   .hero-text button {
-    padding: 2vw 3vw;
-    font-size: 3.5vw;
+    padding: 1vw 3vw;
+    font-size: 3vw;
     border-radius: 10px;
   }
   .hero-image img {
@@ -369,6 +371,7 @@ td {
   background-color: #dddddd;
 }
 
+/* ====Media Query for Education&Profession section======= */
 @media screen and (min-width: 577px) and (max-width: 992px) {
   .heading {
     font-size: 3.2vw;
@@ -524,7 +527,7 @@ td {
   font-size: 20px;
   color: var(--secondaryColor);
 }
-
+/* ===Media Query for skills section===== */
 @media screen and (min-width: 577px) and (max-width: 992px) {
   .skill-texts .heading {
     padding: 25px 20px 20px;
@@ -616,8 +619,9 @@ td {
     font-weight: 400;
   }
 }
+/* ===skills section ends==== */
 
-/* ======== project section========= */
+/* ======== project section starts========= */
 .wrapper {
   width: 85%;
   margin: 0 auto;
@@ -704,6 +708,7 @@ td {
   font-weight: 700;
   cursor: pointer;
 }
+
 /* ==media query for projects=== */
 @media screen and (min-width: 769px) and (max-width: 992px) {
   .projects .wrapper {
@@ -773,6 +778,7 @@ td {
     text-shadow: 0.2px 0.2px 0.3px white;
   }
 }
+/* ===project section ends===== */
 
 /* =======testimonial section====== */
 
@@ -875,6 +881,7 @@ td {
   border-radius: 10px;
 }
 
+/* ===Media Query for Testimonials====== */
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .testimonial-section {
     height: 70vh;
@@ -1121,6 +1128,7 @@ td {
     object-position: top center;
   }
 }
+/* =====Testimonials section ends========= */
 
 /* ===Contact section starts== */
 .contact-us {
@@ -1288,7 +1296,6 @@ td {
 
 /* ====media query for contact us=== */
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  /* ===Contact section starts== */
   .contact-us {
     width: 100%;
     margin: 10px 0 20px;
@@ -1637,6 +1644,7 @@ td {
     margin-right: 20px;
   }
 }
+/* ===contact us section ends========= */
 
 /* ====footer====== */
 .footer {

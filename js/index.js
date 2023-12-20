@@ -1,12 +1,20 @@
 // ======preLoader Splash screen============
-function splashLoader() {
-  const loader = document.getElementById("splash-screen");
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
+    hideSplashScreen();
+  },2000);
+});
 
-  window.addEventListener("load", () => {
-    loader.style.display = "none";
-  });
+function hideSplashScreen() {
+  const splashScreen = document.getElementById("splash-screen");
+  const mainContent = document.getElementById("main-content");
+
+  splashScreen.style.opacity = 0;
+  setTimeout(function () {
+    splashScreen.style.display = "none";
+    mainContent.style.display = "block";
+  }, 500);
 }
-splashLoader();
 
 // ======Navbar Toggle Section=========
 const hamburger = document.getElementById("hamburger");
@@ -154,7 +162,7 @@ form.addEventListener("submit", (e) => {
     !handleSubject() ||
     !handleCheckbox()
   ) {
-    alert("please fix error to submit");
+    alert("Fill all the fields to submit");
   } else {
     alert("Thanks for your message");
     e.target.reset();
@@ -163,5 +171,3 @@ form.addEventListener("submit", (e) => {
     subjectError.innerText = "";
   }
 });
-
-

@@ -121,7 +121,7 @@ form.addEventListener("submit", (e) => {
     !handleSubject() ||
     !handleCheckbox()
   ) {
-    alert("please fix error to submit");
+    alert("Fill all the fields to submit");
   } else {
     alert("Thanks for your message");
     e.target.reset();

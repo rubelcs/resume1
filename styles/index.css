@@ -18,13 +18,37 @@ body {
 }
 
 /* =====splash preLoading screen======= */
+
 #splash-screen {
   position: fixed;
   width: 100%;
-  height: 100vh;
-  background: #000 url("../images/Gear-0.2s-200px.gif") no-repeat center center;
-  background-size: 10%;
-  z-index: 100;
+  height: 100%;
+  background-color: var(--primaryColor); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+  z-index: 1000;
+}
+.splash-content {
+  text-align: center;
+  color: var(--backgroundColor);
+  animation: moveText 2s ease-in-out forwards; 
+}
+@keyframes moveText {
+  0% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(-100%);
+  }
+}
+
+#main-content {
+  display: none;
 }
 
 .body-div {

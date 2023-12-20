@@ -224,6 +224,7 @@ header .wrapper {
   align-items: flex-start;
   justify-content: center;
   padding-bottom: 20px;
+  padding-top: 40px;
 }
 
 /* ==contact left side data and icon=== */
@@ -334,7 +335,7 @@ header .wrapper {
   /* background-color: rgb(183, 234, 116); */
 }
 #form input {
-  width: 98%;
+  width: 92%;
   padding: 4px;
   margin-bottom: 4px;
   outline: none;

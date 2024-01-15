@@ -69,10 +69,8 @@ header .wrapper {
   justify-content: space-between;
   align-items: center;
 }
-.wrapper .logo h3 {
-  font-size: 2.5vw;
-  font-weight: 700;
-  color: var(--primaryColor);
+.wrapper .logo a img {
+  width: 40%;
 }
 .wrapper ul {
   list-style: none;
@@ -121,8 +119,8 @@ header .wrapper {
   header {
     position: relative;
   }
-  .wrapper .logo h3 {
-    font-size: 3vw;
+  .wrapper .logo a img {
+    width: 20%;
   }
   .menu {
     position: absolute;
@@ -157,8 +155,8 @@ header .wrapper {
   header {
     position: relative;
   }
-  .wrapper .logo h3 {
-    font-size: 5vw;
+  .wrapper .logo a img {
+    width: 25%;
   }
   .menu {
     position: absolute;
@@ -261,8 +259,9 @@ header .wrapper {
 }
 .user-text {
   background-color: #a6766542;
-  width: 500px;
-  height: 280px;
+  text-align: center;
+  width: 350px;
+  height: 350px;
   position: absolute;
   left: 5%;
   top: 50%;
@@ -270,7 +269,7 @@ header .wrapper {
   border-radius: 10px;
   color: var(--buttonTextColor);
   padding: 50px;
-  z-index: 3;
+  z-index: 2;
 }
 .user-text p {
   font-size: 20px;
@@ -574,13 +573,8 @@ header .wrapper {
 .footer-wrapper .logo {
   flex-grow: 1;
 }
-.footer-wrapper .logo h3 {
-  font-size: 40px;
-  font-weight: 700;
-  color: white;
-  line-height: 40px;
-  letter-spacing: 2px;
-  text-align: left;
+.footer-wrapper .logo a img{
+  width: 40%;
 }
 .logo h3 span {
   color: var(--secondaryColor);
@@ -629,11 +623,8 @@ header .wrapper {
   .footer-wrapper .logo {
     flex-grow: 1;
   }
-  .footer-wrapper .logo h3 {
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 32px;
-    letter-spacing: 1px;
+  .footer-wrapper .logo a img {
+    width: 25%;
   }
   .footer-info h4 {
     font-size: 14px;
@@ -663,11 +654,8 @@ header .wrapper {
   .footer-wrapper .logo {
     flex-grow: 1;
   }
-  .footer-wrapper .logo h3 {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 1px;
+  .footer-wrapper .logo a img{
+    width: 25%;
   }
   .footer-info h4 {
     font-size: 12px;
